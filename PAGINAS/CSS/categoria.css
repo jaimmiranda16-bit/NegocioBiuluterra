@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    /* ESTO AGREGUE */
+    box-sizing: border-box;
+}
+
+/* NUEVO */
+:root{
+    --verde-oscuro:#234B4B;
+    --verde:#4E8068;
+    --verde-claro:#CDE7D8;
+    --crema:#F5F1E8;
+    --blanco:#FFFFFF;
+    --gris:#6F7772;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* .enlaces.activo {
+    color: var(--blanco);
+} */
+
+/* .enlaces.activo::after {
+    width: 100%;
+} */
+
+.cardsCate{ 
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    
+    /* TAMAÑO */
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+}
+
+.cardsCate > div{
+    width: auto;
+    margin: 0;
+    padding: 20px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgb(0, 0,0,.08);
+
+    transition: .3s;
+    animation: scroll both;
+    animation-timeline: view(60% 10%);
+}
+
+.cardsCate > div:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgb(0, 0,0,.15);
+}
+
+.cardsCate .subtituloCate{
+    color: var(--crema);
+    text-align: center;
+}
+.cardsCate button{
+    width: 100%;
+    margin-top: 15px;
+    padding: 11px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--verde-oscuro);
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cardsCate button:hover{
+    background-color: var(--verde);
+}
+
+@media (max-width: 768px) {
+    .cardsCate { 
+     grid-template-columns: 1fr;
+     gap: 20px;        
+   }
+}

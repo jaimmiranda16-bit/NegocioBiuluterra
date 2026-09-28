@@ -1,0 +1,5 @@
+{
+    "editor.defaultFormatter": "vscode.css-language-features",
+    "notebook.defaultFormatter": "vscode.css-language-features",
+    "liveServer.settings.port": 5501
+}
