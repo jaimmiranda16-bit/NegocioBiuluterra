@@ -1,102 +1,103 @@
 const productos = [
     {
-        nombre:"promo 1",
-        empresa:"Tan Natural",
-        precioAntes:40,
+        nombre: "Shampoo ORO + Shampoo Ultrahidratante + crema",
+        empresa: "Tan Natural",
+        precioAntes: 40,
         precio: 20,
-        categoria:"oferta",
-        image:"/FOTOS Y VIDEOS/promo_1.png",
+        categoria: "oferta",
+        image: "/FOTOS Y VIDEOS/promo_1.png",
+        descripcion: "Combo ideal para nutrición profunda y cuidado de cabellos alisados o tratados químicamente, combinando el poder del Shampoo Oro (Keratina y Caviar), un shampoo ultrahidratante y una máscara capilar intensiva."
     },
-
-     {
-        nombre:"promo 2",
-        empresa:"Tan Natural",
-        precioAntes:40,
+    {
+        nombre: "2 Shampoo + crema",
+        empresa: "Tan Natural",
+        precioAntes: 40,
         precio: 20,
-        categoria:"oferta",
-        image:"/FOTOS Y VIDEOS/promo_2.png",
+        categoria: "oferta",
+        image: "/FOTOS Y VIDEOS/promo_2.png",
+        descripcion: "Pack completo de mantenimiento diario con dos shampoos de la línea y una máscara reacondicionadora para mantener el cabello hidratado, suave y protegido todos los días."
     },
-
-     {
-        nombre:"promo 3",
-        empresa:"Tan Natural",
-        precioAntes:40,
+    {
+        nombre: "2 shampoo ultrahidratante + crema",
+        empresa: "Tan Natural",
+        precioAntes: 40,
         precio: 20,
-        categoria:"oferta",
-        image:"/FOTOS Y VIDEOS/promo_3.png",
+        categoria: "oferta",
+        image: "/FOTOS Y VIDEOS/promo_3.png",
+        descripcion: "Doble nutrición e hidratación profunda diseñada para cabellos secos o deshidratados, acompañado de una crema de tratamiento que reestructura y sella la fibra capilar."
     },
-
-     {
-        nombre:"promo 4",
-        empresa:"Tan Natural",
-        precioAntes:40,
+    {
+        nombre: " 2 Shampoo + Enjuague capilar",
+        empresa: "Tan Natural",
+        precioAntes: 40,
         precio: 20,
-        categoria:"oferta",
-        image:"/FOTOS Y VIDEOS/promo_4.png",
+        categoria: "oferta",
+        image: "/FOTOS Y VIDEOS/promo_4.png",
+        descripcion: "Dúo esencial de limpieza y acondicionamiento diario. Desenreda, nutre y aporta elasticidad y brillo natural a todo tipo de cabellos."
     },
-
-     {
-        nombre:"promo 6",
-        empresa:"Tan Natural",
-        precioAntes:40,
+    {
+        nombre: "2 Shampoo reparador + Mascarilla capilar",
+        empresa: "Tan Natural",
+        precioAntes: 40,
         precio: 20,
-        categoria:"oferta",
-        image:"/FOTOS Y VIDEOS/promo_6.png",
+        categoria: "oferta",
+        image: "/FOTOS Y VIDEOS/promo_6.png",
+        descripcion: "Tratamiento intensivo de reparación capilar con doble shampoo y mascarilla con óleos vitales o lino, ideal para revitalizar cabellos frágiles, dañados o maltratados."
     },
-
-     {
-        nombre:"promo 7",
-        empresa:"Tan Natural",
-        precioAntes:40,
+    {
+        nombre: "Shampoo Triaminico + Enjuague",
+        empresa: "Tan Natural",
+        precioAntes: 40,
         precio: 20,
-        categoria:"oferta",
-        image:"/FOTOS Y VIDEOS/promo_7.png",
+        categoria: "oferta",
+        image: "/FOTOS Y VIDEOS/promo_7.png",
+        descripcion: "Kit con Complejo Triamínico (Cistina, Cisteína y Metionina) que penetra profundamente para reparar áreas dañadas internas, sellar fisuras y devolverle el brillo y la flexibilidad al cabello."
     },
-
-     {
-        nombre:"promo 8",
-        empresa:"Tan Natural",
-        precioAntes:40,
+    {
+        nombre: "Shampoo caida del pelo + Neutro",
+        empresa: "Tan Natural",
+        precioAntes: 40,
         precio: 20,
-        categoria:"oferta",
-        image:"/FOTOS Y VIDEOS/promo_8.png",
+        categoria: "oferta",
+        image: "/FOTOS Y VIDEOS/promo_8.png",
+        descripcion: "Combinación perfecta entre el shampoo con Biotina y Quinina para estimular el crecimiento y frenar la caída, y el shampoo neutro ideal para la limpieza suave y frecuente de toda la familia."
     },
-
-     {
-        nombre:"promo 9",
-        empresa:"Tan Natural",
-        precioAntes:40,
+    {
+        nombre: "Shampoo hidratante + Enjuague",
+        empresa: "Tan Natural",
+        precioAntes: 40,
         precio: 20,
-        categoria:"oferta",
-        image:"/FOTOS Y VIDEOS/promo_9.png",
+        categoria: "oferta",
+        image: "/FOTOS Y VIDEOS/promo_9.png",
+        descripcion: "Dúo hidratante con extractos naturales de Sésamo y Lino, formulado especialmente para devolverle la humedad esencial a los cabellos secos, quebradizos y sin vida."
     },
-
-     {
-        nombre:"promo 10",
-        empresa:"Tan Natural",
-        precioAntes:40,
+    {
+        nombre: "Shampoo vegetal+ Enjuague",
+        empresa: "Tan Natural",
+        precioAntes: 40,
         precio: 20,
-        categoria:"oferta",
-        image:"/FOTOS Y VIDEOS/promo_10.png",
+        categoria: "oferta",
+        image: "/FOTOS Y VIDEOS/promo_10.png",
+        descripcion: "Rutina natural con ingredientes botánicos para una limpieza delicada, respetando la fibra capilar y aportando frescura, vitalidad y suavidad al peinar."
     },
-
-     {
-        nombre:"promo 11",
-        empresa:"Tan Natural",
-        precioAntes:40,
+    {
+        nombre: "Shampoo + Enjuague con caviaer",
+        empresa: "Tan Natural",
+        precioAntes: 40,
         precio: 20,
-        categoria:"oferta",
-        image:"/FOTOS Y VIDEOS/promo_11.png",
+        categoria: "oferta",
+        image: "/FOTOS Y VIDEOS/promo_11.png",
+        descripcion: "Tratamiento con Keratina y Caviar ideado para cabellos alisados o lacios naturales; repara las fibras, elimina el frizz e hidrata intensamente cada hebra."
     },
-
-     {
-        nombre:"promo 12",
-        empresa:"Tan Natural",
-        precioAntes:40,
+    {
+        nombre: "Shampoo + Enjuague + crema ",
+        empresa: "Tan Natural",
+        precioAntes: 40,
         precio: 20,
-        categoria:"oferta",
-        image:"/FOTOS Y VIDEOS/promo_12.png",
-     },
+        categoria: "oferta",
+        image: "/FOTOS Y VIDEOS/promo_12.png",
+        descripcion: "El set definitivo de cuidado capilar completo (Shampoo, Enjuague y Baño de Crema) para lograr una nutrición total, brillo extremo, suavidad y un control absoluto del frizz."
+    },
 ];
 
 const ofer = document.querySelector("#ofer");
@@ -115,8 +116,8 @@ productosTwo.forEach(producto =>{
             </div>
 
             <div class="face back">
-                <span class="card--descripcion">${producto.empresa}</span>
-                <h2 class="card--titulo">${producto.nombre}</h2>
+                <h2 class="card--titulo">${producto.empresa}</h2>
+                <span class="card--descripcion">${producto.descripcion}</span>
                 <h2 class="card--precioOferta">$${producto.precioAntes}</h2>
                 <h2 class="card--precio">$${producto.precio}</h2>
 

@@ -1,20 +1,12 @@
 const productos = [
     {
-        nombre:"Mascara Reacondicionadora capilar",
-        empresa:"Tan Natural",
+        nombre: "Mascara Reacondicionadora capilar",
+        empresa: "Tan Natural",
         precio: 20,
-        categoria:"crema",
-        image:"/FOTOS Y VIDEOS/mascara_reacondicionadora_capilar.png",
+        categoria: "crema",
+        image: "/FOTOS Y VIDEOS/mascara_reacondicionadora_capilar.png",
+        descripcion: "Tratamiento con Óleos Vitales (Argán, Macadamia, Lino, Oliva y Almendras) que reestructura la cutícula capilar, aporta multi-beneficios, nutrición intensiva, desenreda, acondiciona y devuelve el brillo y la elasticidad al cabello."
     },
-
-        {
-        nombre:"Mascara Reacondicionadora capilar",
-        empresa:"Tan Natural",
-        precio: 20,
-        categoria:"crema",
-        image:"/FOTOS Y VIDEOS/baño_de_crema.png",
-    },
-
 ];
 
 const card = document.querySelector("#cards");
@@ -29,8 +21,8 @@ productos.forEach(producto => {
             </div>
 
             <div class="face back">
-                <span class="card--descripcion">${producto.empresa}</span>
-                <h2 class="card--titulo">${producto.nombre}</h2>
+                <h2 class="card--titulo">${producto.empresa}</h2>
+                <span class="card--descripcion">${producto.descripcion}</span>
                 <h2 class="card--precio">$${producto.precio}</h2>
 
                 <div class="link">
