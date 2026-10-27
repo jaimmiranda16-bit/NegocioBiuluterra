@@ -211,7 +211,7 @@ ul{
 .hero-contenido-replica {
     width: 550px;
     color: var(--blanco);
-    background: rgba(35, 75, 75, 0.25); /* Tono verde oscuro semitransparente */
+    background: rgba(35, 75, 75, 0.25); 
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -219,7 +219,6 @@ ul{
     border-radius: 24px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     
-    /* Forzamos que el texto y los elementos internos estén alineados a la derecha */
     text-align: right;
 }
 
