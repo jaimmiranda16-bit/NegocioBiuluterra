@@ -42,6 +42,7 @@ body{
 h1,h2,h3{
     font-family: "Playfair Display", serif;
 }
+
 a{
     text-decoration: none;
     color: var(--verde-oscuro);
@@ -75,10 +76,9 @@ a{
 
 nav{                                        
     display: flex;
-    /* CAMBIADO */
-    margin: auto;
     align-items: center;
     justify-content: space-between;
+    width:100%;
 }
 /*---------------------------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------*/
@@ -89,18 +89,38 @@ nav{
 }
 
 .logo img{
-    width: 65px;
-    height: 65px;
+    width: auto;
+    height: 50px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 5px 15px rgb(0, 0,0,0.15);
 }
 
+
+.titulo-header {
+    display: flex;
+    gap: 3px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.titulo-header .letra {
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+    opacity: 1;
+}
+
+/* Estado cuando se transforma en emoji */
+.titulo-header .letra.transformada {
+    transform: scale(1.25) translateY(-3px);
+    opacity: 0.9;
+}
+
 ul{
     display: flex;
-    gap:40px;
+    gap:20px;
     list-style: none;
-    margin-left: -600px;
+    align-items: center;
 }
 
 .enlaces{
@@ -117,12 +137,18 @@ ul{
     position: relative;
     padding: 8px 14px;
 
-    transition: .3s ease;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
 }
 
 .enlaces:hover{
     color: var(--verde-oscuro);
     background-color: var(--verde-claro);
+    box-shadow: 0 8px 8px 0 #bebbbc,0 8px 8px 0 #adadab;
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    -moz-transform:translate(0px,5px);
 }
 
 .enlaces.activo{
@@ -327,7 +353,37 @@ ul{
     font-size: 40px;
     color: var(--crema);
     text-shadow: 0 2px 4px rgba(0,0,0,.2);
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation-timeline:view(50% 0%);
 }
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 
 .titulo-seccion{
     text-align: center;
@@ -349,6 +405,8 @@ ul{
     width: 300px;
     height: 350px;
     margin: 20px;
+    animation: both ease-in-out;
+    animation-timeline: view(50% 0%);
 }
 
 .card .face {
@@ -379,12 +437,12 @@ ul{
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 45px;
+    /* height: 45px; */
     line-height: 45px;
     margin: 0;
 
     color: #fff;
-    background: rgba(0,0,0,.4);
+    background: var(--verde-oscuro);
     text-align: center;
 }
 
@@ -932,7 +990,7 @@ ul{
     }
 
     .cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr;
         gap: 20px; 
     }
 

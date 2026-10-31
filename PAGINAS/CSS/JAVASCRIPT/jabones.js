@@ -1,5 +1,28 @@
 const productos = [
-
+    {
+        nombre: "Jabón de Lavanda",
+        empresa: "Tan Natural",
+        precio: 20,
+        categoria: "jabon",
+        image: "/FOTOS Y VIDEOS/WhatsApp Image 2026-10-08 at 13.03.16 (1).jpeg",
+        descripcion: "Formulado con aceite esencial de lavanda y flores secas. Calma la piel sensible, alivia irritaciones y brinda una experiencia de relajación profunda gracias a su aroma aromaterapéutico natural"
+    },
+        {
+        nombre: "Jabón de Miel",
+        empresa: "Tan Natural",
+        precio: 20,
+        categoria: "jabon",
+        image: "/FOTOS Y VIDEOS/WhatsApp Image 2026-10-08 at 13.03.16.jpg",
+        descripcion: "Enriquecido con miel pura y aceites nutritivos. La miel atrae y retiene la humedad natural de la piel, dejándola suave, elástica y profundamente hidratada."
+    },
+    {
+        nombre: "Jabón de Arcilla",
+        empresa: "Tan Natural",
+        precio: 20,
+        categoria: "jabon",
+        image: "/FOTOS Y VIDEOS/WhatsApp Image 2026-10-08 at 13.03.18.jpeg",
+        descripcion: " Elaborado con arcillas minerales naturales que absorben impurezas, desintoxican los poros y equilibran el exceso de grasitud sin resecar."
+    }
 ];
 
 const card = document.querySelector("#cards");
@@ -61,20 +84,15 @@ function agregarAlCarrito(producto) {
 
 //--------------------------------------------------------------------------------------
 function comprarProducto(producto) {
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const numeroWhatsApp = "5493815003753"; 
 
-    const productoExistente = carrito.find(
-        item => item.nombre === producto.nombre
-    );
+    const mensaje = `Hola, quiero comprar este producto "${producto.nombre}", lo tendra disponible?`;
 
-    if (productoExistente) {
-        productoExistente.cantidad++;
-    } else {
-        carrito.push({...producto,cantidad: 1});
-    }
-    localStorage.setItem("carrito", JSON.stringify(carrito));
+    const mensajeCodificado = encodeURIComponent(mensaje);
 
-    window.location.href = "/PAGINAS/carrito.html";
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+
+    window.open(urlWhatsApp, "_blank");
 }
 
 

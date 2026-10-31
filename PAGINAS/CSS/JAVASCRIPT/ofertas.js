@@ -166,20 +166,15 @@ function agregarAlCarrito(producto) {
 
 //--------------------------------------------------------------------------------------
 function comprarProducto(producto) {
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const numeroWhatsApp = "5493815003753"; 
 
-    const productoExistente = carrito.find(
-        item => item.nombre === producto.nombre
-    );
+    const mensaje = `Hola, quiero comprar este producto "${producto.nombre}", lo tendra disponible?`;
 
-    if (productoExistente) {
-        productoExistente.cantidad++;
-    } else {
-        carrito.push({...producto,cantidad: 1});
-    }
-    localStorage.setItem("carrito", JSON.stringify(carrito));
+    const mensajeCodificado = encodeURIComponent(mensaje);
 
-    window.location.href = "/PAGINAS/carrito.html";
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+
+    window.open(urlWhatsApp, "_blank");
 }
 
 
@@ -227,3 +222,24 @@ setInterval(function() {
 }, 4000);
 
 cambiarHero();
+
+document.addEventListener("DOMContentLoaded", () => {
+    const letras = document.querySelectorAll('.titulo-header .letra');
+
+    setInterval(() => {
+        // Elegimos una letra al azar de la palabra
+        const randomIndex = Math.floor(Math.random() * letras.length);
+        const letraSpan = letras[randomIndex];
+
+        // Cambiamos a emoji
+        letraSpan.classList.add('transformada');
+        letraSpan.textContent = letraSpan.getAttribute('data-emoji');
+
+        // Después de 1.8 segundos, vuelve a la letra original suavemente
+        setTimeout(() => {
+            letraSpan.classList.remove('transformada');
+            letraSpan.textContent = letraSpan.getAttribute('data-char');
+        }, 1800);
+
+    }, 2500); // Cada 2.5 segundos se anima una letra diferente de forma constante
+});

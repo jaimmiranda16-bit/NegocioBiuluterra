@@ -116,3 +116,24 @@ setInterval(function() {
 }, 4000);
 
 cambiarHeroDos();
+
+document.addEventListener("DOMContentLoaded", () => {
+    const letras = document.querySelectorAll('.titulo-header .letra');
+
+    setInterval(() => {
+        // Elegimos una letra al azar de la palabra
+        const randomIndex = Math.floor(Math.random() * letras.length);
+        const letraSpan = letras[randomIndex];
+
+        // Cambiamos a emoji
+        letraSpan.classList.add('transformada');
+        letraSpan.textContent = letraSpan.getAttribute('data-emoji');
+
+        // Después de 1.8 segundos, vuelve a la letra original suavemente
+        setTimeout(() => {
+            letraSpan.classList.remove('transformada');
+            letraSpan.textContent = letraSpan.getAttribute('data-char');
+        }, 1800);
+
+    }, 2500); // Cada 2.5 segundos se anima una letra diferente de forma constante
+});

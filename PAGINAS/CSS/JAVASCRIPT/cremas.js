@@ -68,20 +68,15 @@ function agregarAlCarrito(producto) {
 
 //--------------------------------------------------------------------------------------
 function comprarProducto(producto) {
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const numeroWhatsApp = "5493815003753"; 
 
-    const productoExistente = carrito.find(
-        item => item.nombre === producto.nombre
-    );
+    const mensaje = `Hola, quiero comprar este producto "${producto.nombre}", lo tendra disponible?`;
 
-    if (productoExistente) {
-        productoExistente.cantidad++;
-    } else {
-        carrito.push({...producto,cantidad: 1});
-    }
-    localStorage.setItem("carrito", JSON.stringify(carrito));
+    const mensajeCodificado = encodeURIComponent(mensaje);
 
-    window.location.href = "/PAGINAS/carrito.html";
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+
+    window.open(urlWhatsApp, "_blank");
 }
 
 
